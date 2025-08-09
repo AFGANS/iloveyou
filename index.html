@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surat untuk Aurell</title>
+    <!-- Tailwind CSS CDN untuk utilitas -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link ke font dari Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Link ke file CSS eksternal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="min-h-screen flex items-center justify-center p-4">
+
+    <div class="container mx-auto max-w-xl text-center">
+
+        <!-- Tombol untuk menampilkan surat -->
+        <button id="showLetterBtn" class="elegant-button text-white font-bold py-4 px-8 rounded-full focus:outline-none">
+            Buka Surat Ini
+        </button>
+
+        <!-- Container surat yang tersembunyi -->
+        <div id="letterContainer" class="mt-8 flex flex-col items-center relative hidden">
+            
+            <!-- Elemen untuk menampilkan hitungan mundur -->
+            <p id="countdownTimer" class="text-sm font-bold text-gray-600 mb-4 hidden"></p>
+
+            <!-- Surat tergulung yang dapat diklik -->
+            <div class="letter-wrap">
+                <div id="rolledLetter" class="rolled-letter cursor-pointer">
+                    <div class="ribbon"></div>
+                    <!-- Konten surat yang tersembunyi -->
+                    <div id="letterContent" class="letter-content text-left">
+                        <p id="letterHeader" class="letter-header"></p>
+                        <p id="letterBody" class="letter-body"></p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- Pesan terakhir, tersembunyi secara default -->
+        <div id="finalMessage" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center hidden">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-red-500 animate-pulse">
+                I Love You Aurell<br>kamu selalu cantik<br>Di Hatikuu💕🤍💐
+            </h1>
+        </div>
+    </div>
+
+    <!-- GANTI TAUTAN INI DENGAN TAUTAN LANGSUNG KE FILE MP3 ANDA -->
+    <audio id="romanticMusic" src="https://afgans.github.io/yos/pyuu.mov" loop></audio>
+
+    <!-- Link ke file JavaScript eksternal -->
+    <script src="main.js"></script>
+</body>
+</html>
